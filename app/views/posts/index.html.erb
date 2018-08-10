@@ -1,8 +1,12 @@
 <h1>Blog Posts</h1>
 
-<% @post.each do |post| %>
-    <h3><%= post.title %> </h3>
+<% @posts.each do |post| %>
+    <h3><%= link_to post.title,post %> </h3>
     <p><%= post.body %></p>
+    <p><small><%= post.created_at.strftime("%b %d. %y") %></small>
+	</p>
 <hr>
 
 <% end %>
+
+<%= link_to "Add New Post",new_post_path %>
