@@ -18,7 +18,7 @@ class PostsController < ApplicationController
         if @post.save
             redirect_to posts_path, :notice => "Your post was saved"
         else
-            render "New"
+            render "new"
         end
     end
     
