@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     def new
         @post = Post.new
         @category = Category.all
-        @post.author_id = "Jay Carpenter"
+
     end
 
     def create
@@ -44,7 +44,9 @@ class PostsController < ApplicationController
     private
     
     def post_params
-        params.require(:post).permit(:title, :body, :category_id, :author_id)
+        params.require(:post).permit(:title, :body, :category_id, :author_id, :name)
     end
+
+
 
 end
