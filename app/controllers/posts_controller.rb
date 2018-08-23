@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
     def index
-       @posts = Post.all
+       @search = Post.search(params[:search]) 
+       @posts = @search.result
        @categories = Category.all
     end
     
