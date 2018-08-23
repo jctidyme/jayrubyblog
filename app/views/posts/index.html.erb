@@ -1,5 +1,6 @@
 <h1>Blog Posts</h1>
-
+<br>
+<div class = "post">
 <% @posts.each do |post| %>
     <h3><%= link_to post.title,post %> </h3>
     <p><%= post.body %></p>
@@ -8,4 +9,4 @@
 <hr>
 
 <% end %>
-
+</div>

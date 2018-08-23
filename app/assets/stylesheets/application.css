@@ -34,6 +34,7 @@ h1, h2, h3 {
 	font-family: 'Abel', sans-serif;
 	font-weight: normal;
 	color: #D93544;
+
 }
 
 h1 {
@@ -312,6 +313,14 @@ a:hover {
 }
 
 .links a {
+	color:#3F3F3F;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-family: 'Abel', sans-serif;
+	font-weight: normal;
+	font-size: 2em;
+
 }
 
 /* Sidebar */

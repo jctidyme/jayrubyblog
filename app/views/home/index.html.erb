@@ -1,11 +1,11 @@
 
 <% @posts.each do |post| %>
 <div class ="post">
-<h2 class ="title"><%= link_to post.title,post %> </h2>
+<h1><%= link_to post.title,post %> </h1>
     <div class="entry"><%= post.body %></div>
 	<div class="byline">
               <p class="meta"><%= post.created_at.strftime("%b %d. %y") %>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Someone</a></p>
-              <p class="links"><a href="post.html">Read More</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" title="b0x w">Comments</a></p>
+
     </div>
 </div>
 

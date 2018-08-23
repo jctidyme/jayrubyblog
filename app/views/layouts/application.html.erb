@@ -70,17 +70,15 @@
                 <% Category.all.each do|category| %>
                   <li><%= link_to category.name,category %></li>
                 <% end %>
+              </ul>
             </li>
             <li>
-              <h2>Blogroll</h2>
-              <ul>
-                <li><a href="#">Blog Post</a></li>
-                <li><a href="#">Blog Post</a></li>
-                <li><a href="#">Blog Post</a></li>
-                <li><a href="#">Blog Post</a></li>
-                <li><a href="#">Blog Post</a></li>
-                <li><a href="#">Blog Post</a></li>
-              </ul>
+              <h2><%= link_to "Blogroll", posts_path %></h2>
+                <ul>
+                <% Post.all.each do |post| %>
+                  <li><%= link_to post.title,post %></li>
+                  <% end %>
+                </ul>
             </li>
             
           </ul>
