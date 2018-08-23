@@ -1,0 +1,35 @@
+
+        <!-- end #content -->
+        <div id="sidebar">
+          <ul>
+            <li>
+              <div id="search" >
+                <form method="get" action="#">
+                  <div>
+                    <input type="text" name="s" id="search-text" value="" />
+                    <input type="submit" id="search-submit" value="GO" />
+                  </div>
+                </form>
+              </div>
+              <div style="clear: both;">&nbsp;</div>
+            </li>
+
+            <li>
+              <h2><%= link_to "Categories",categories_path %></h2>
+                <ul>  
+                <% Category.all.each do|category| %>
+                  <li><%= link_to category.name,category %></li>
+                <% end %>
+              </ul>
+            </li>
+            <li>
+              <h2><%= link_to "Blogroll", posts_path %></h2>
+                <ul>
+                <% Post.all.each do |post| %>
+                  <li><%= link_to post.title,post %></li>
+                  <% end %>
+                </ul>
+            </li>
+            
+          </ul>
+        </div>

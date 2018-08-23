@@ -1,36 +1,6 @@
-<!DOCTYPE html PUBLIC>
-<html>
-<head>
-  <title>My Ruby Blog | Sample Project</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css" />
-  <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
+<%= render "partials/header" %>
 
-<body>
-<div id="wrapper">
-  <div id="header-wrapper">
-    <div id="header">
-      <div id="logo">
-        <h1><a href="#">TidyMe Blog</a></h1>
-        <p>All about the tidy...</p>
-      </div>
-       <div id="menu">
-        <ul>
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "About", about_path %></li>
-          <li><%= link_to "Blog", posts_path %></li>
-          <li><%= link_to "Contact", contact_path %></li>
-          <li><%= link_to "Resources", resources_path %></li>
-        </ul>
-    </div>
-    </div>
-  </div>
-  <!-- end #header -->
+
   <div id="page">
     <div id="page-bgtop">
       <div id="page-bgbtm">
@@ -48,40 +18,7 @@
           
           <div style="clear: both;">&nbsp;</div>
         </div>
-        <!-- end #content -->
-        <div id="sidebar">
-          <ul>
-            <li>
-              <div id="search" >
-                <form method="get" action="#">
-                  <div>
-                    <input type="text" name="s" id="search-text" value="" />
-                    <input type="submit" id="search-submit" value="GO" />
-                  </div>
-                </form>
-              </div>
-              <div style="clear: both;">&nbsp;</div>
-            </li>
-
-            <li>
-              <h2><%= link_to "Categories",categories_path %></h2>
-                <ul>  
-                <% Category.all.each do|category| %>
-                  <li><%= link_to category.name,category %></li>
-                <% end %>
-              </ul>
-            </li>
-            <li>
-              <h2><%= link_to "Blogroll", posts_path %></h2>
-                <ul>
-                <% Post.all.each do |post| %>
-                  <li><%= link_to post.title,post %></li>
-                  <% end %>
-                </ul>
-            </li>
-            
-          </ul>
-        </div>
+        <%= render "partials/sidebar" %>
         <!-- end #sidebar -->
         <div style="clear: both;">&nbsp;</div>
       </div>
