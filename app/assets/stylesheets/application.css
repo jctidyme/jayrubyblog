@@ -68,7 +68,7 @@ a:hover {
 
 #wrapper {
 	width: 1000px;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	background: #000000;
 }
