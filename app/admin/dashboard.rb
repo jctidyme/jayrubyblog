@@ -19,6 +19,7 @@ ActiveAdmin.register_page "Dashboard" do
                     table_for Post.order("id desc").limit(Category.count) do
                         column("ID") { |post| post.id }
                         column("Name") { |post| link_to(post.title, admin_post_path(post)) }
+                        column("Author") { |post| post.admin_user.name}
                         column("Created At")   { |post| post.created_at}
                     end
                 end
