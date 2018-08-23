@@ -68,7 +68,7 @@ a:hover {
 
 #wrapper {
 	width: 1000px;
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
 	background: #000000;
 }
@@ -78,7 +78,7 @@ a:hover {
 #header-wrapper {
 	height: 120px;
 }
-
+/**/
 #header {
 	width: 1000px;
 	margin: 0 auto;
