@@ -1,7 +1,11 @@
-<h1>Categories#index</h1>
-
-<ul>	
-<% @categories.each do|category| %>
-	<li><h3><%= link_to category.name,category %></h3></li>
-<% end %>
+<h1>Blog Categories</h1>
+<br>
+<div class = "post">
+	<ul>	
+		<% @categories.each do|category| %>
+			<p>	
+				<span class="large-text"><%= link_to category.name,category %> / <%= category.posts.count %> / </span><span class="small-text"><%= formatted_date category.posts.last&.created_at %> LAST POST</span>
+			</p>
+		<% end %>
 </ul>
+</div>

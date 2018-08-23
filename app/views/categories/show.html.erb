@@ -1,5 +1,6 @@
 <h1><%= @category.name %></h1>
-
+<br>
+<div class = "post">
 <% if @posts.each do |post| %>
 	<h3><%= link_to post.title,post %></h3>
 	<p><%= post.body %></p>
@@ -10,3 +11,4 @@
 <% end %>
 
 	<%= link_to "Back", categories_path %>	
+</div>

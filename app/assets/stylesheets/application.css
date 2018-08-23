@@ -33,7 +33,7 @@ h1, h2, h3 {
 	text-transform: uppercase;
 	font-family: 'Abel', sans-serif;
 	font-weight: normal;
-	color: #2B2522;
+	color: #D93544;
 }
 
 h1 {
@@ -123,6 +123,9 @@ a:hover {
 	font-style: italic;
 	color: #BEBEBE;
 } 
+
+
+
 
 #logo a {
 	border: none;
@@ -280,6 +283,22 @@ a:hover {
 .post_full .byline p{
     padding:0;
     margin:0;
+}
+
+.small-text {
+	font-family: Arial, Helvetica, sans-serif;\
+	font-size: 14px;
+}
+
+.large-text {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-family: 'Abel', sans-serif;
+	font-weight: normal;
+	color: #2B2522;
+	font-size: 1.6em;
+
 }
 
 .post_full .byline{

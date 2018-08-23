@@ -17,8 +17,8 @@
   <div id="header-wrapper">
     <div id="header">
       <div id="logo">
-        <h1><a href="#">My Ruby Blog</a></h1>
-        <p>Learning Ruby on Rails</p>
+        <h1><a href="#">TidyMe Blog</a></h1>
+        <p>All about the tidy...</p>
       </div>
        <div id="menu">
         <ul class ="main-nav">
@@ -36,7 +36,7 @@
     <div id="page-bgtop">
       <div id="page-bgbtm">
         <div id="content">
-    <div class ="flass-message">    
+    <div class ="flash-message">    
         <% flash.each do |key, value| %>
         <p><%= value %></p>
         <% end %>
@@ -65,15 +65,11 @@
             </li>
 
             <li>
-              <h2>Categories</h2>
-              <ul>
-                <li><a href="#">Ruby Programming Language</a></li>
-                                                                <li><a href="#">Ruby on Rails Framework</a></li>
-                <li><a href="#">MVC Stuff</a></li>
-                <li><a href="#">Learn Linux</a></li>
-                <li><a href="#">Other Languages</a></li>
-          
-              </ul>
+              <h2><%= link_to "Categories",categories_path %></h2>
+                <ul>  
+                <% Category.all.each do|category| %>
+                  <li><%= link_to category.name,category %></li>
+                <% end %>
             </li>
             <li>
               <h2>Blogroll</h2>
@@ -96,7 +92,7 @@
   </div>
   <!-- end #page -->
   <div id="footer">
-    <p>&copy; 2013, My Ruby Blog - Sample Project</p>
+    <p>&copy; 2018, TidyMe - Tidy Blog</p>
   </div>
 </div>
 <!-- end #footer -->
