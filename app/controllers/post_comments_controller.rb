@@ -1,12 +1,10 @@
 class PostCommentsController < InheritedResources::Base
 
-
-
     def create
     	@post_comment = PostComment.new(post_comment_params)
     	if @post_comment.save
     		flash[:notice] = "Comment was left successfully"
-    		redirect_to(@post_comment.post)
+    		redirect_to(@post_comment.post, notice: )
     	else
     		flash[:notice] = "Comment was not created", (@post_comment.errors)
     		redirect_to(@post_comment.post)

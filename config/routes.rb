@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   get 'pages/resources'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+  resources :admin_users
+  get 'admin_users/index'
+  get 'admin_users/edit'
+  get 'admin_users/new'
+  get 'admin_users/show'  
   resources :categories
   get 'categories/index'
   get 'categories/edit'
@@ -17,4 +22,5 @@ Rails.application.routes.draw do
   get '/resources', :to =>'pages#resources'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
  root :to =>'home#index'
+
 end

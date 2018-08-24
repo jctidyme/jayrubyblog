@@ -1,0 +1,11 @@
+<div class = "blog-header"><h1>Bloggers</h1></div>
+<br>
+<div class = "post">
+	<ul>	
+		<% @users.each do|user| %>
+			<p>	
+				<span class="large-text"><%= link_to user.name,user %> / <%= user.posts.count %> / </span><span class="small-text"><%= formatted_date user.posts.last&.created_at %> LAST POST</span>
+			</p>
+		<% end %>
+</ul>
+</div>
