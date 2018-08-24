@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+	test "If title is there" do 
+		post = Post.new(:title => "Some Title")
+		assert post.valid? 
+	end
 end

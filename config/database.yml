@@ -23,6 +23,7 @@ test:
   adapter: postgresql
   username: postgres
   password: AcaciaLexJay-2
+  database: myrubyblog_test
 
 production:
   <<: *default
