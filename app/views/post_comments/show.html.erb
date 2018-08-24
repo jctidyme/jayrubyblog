@@ -1,0 +1,5 @@
+<div id = "post">
+    <i><b><%= post_comment.name %></b> said</i><br>
+    <%= simple_format (post_comment.body) %><br>
+    <small> on <%= post_comment.created_at.strftime("%A, %d %B @ %-l:%M%P") %></small>
+</div>

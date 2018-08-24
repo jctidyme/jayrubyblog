@@ -6,7 +6,7 @@
 <h3><%= link_to post.title,post %> </h3>
     <div class="entry"><%= post.body %></div>
 	<div class="byline">
-              <small><%= post.created_at.strftime("%b %d. %y") %>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= post.admin_user.name %></small>
+              <small><%= post.created_at.strftime("%b %d. %y") %>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= post.admin_user.name %>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= post.post_comments.count %> comments</small>
 
     </div>
 </div>
