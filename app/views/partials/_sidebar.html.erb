@@ -1,12 +1,15 @@
+<HEAD>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css" />
+</HEAD>
 <div id="sidebar">
     <ul>
-        <li>
+        <!-- <li>
         	<div id="search" >
         		<input type="text" id="query" name="query" />
         		<input type="submit" id="query" name="query" />
         	</div>
             <div style="clear: both;">&nbsp;</div>
-        </li>
+        </li> -->
         <li>
           	<h2><%= link_to "Categories",categories_path %></h2>
                 <ul>  
@@ -18,7 +21,7 @@
         <li>
         	<h2><%= link_to "Blogroll", posts_path %></h2>
             	<ul>
-            	<% Post.all.each do |post| %>
+            	<% Post.last(10).each do |post| %>
             	<li><%= link_to post.title,post %></li>
             	<% end %>
             	</ul>
