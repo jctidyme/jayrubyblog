@@ -119,9 +119,10 @@ a:hover {
 	font-weight: lighter;
 	color: #ff7a3e;
 
+
 }
 
-#logo h1 a, a:hover {
+#logo a, h1 a:hover {
 	color: #ff7a3e;
 
 }
@@ -138,14 +139,23 @@ a:hover {
 	text-shadow: none;
 } 
 
-
-
+#logo h1 a:hover {
+    color: #ff7a3e;
+    border: none;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    text-shadow: none;
+}
 
 #logo a:hover {
 	border: none;
 	background: none;
 	text-decoration: none;
-	color: #707070;
+	/*color: #707070;*/
 }
 
 /* Search */
