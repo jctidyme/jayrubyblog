@@ -4,8 +4,11 @@
 	<ul>	
 		<% @categories.each do|category| %>
 			<p>	
-				<span class="large-text"><%= link_to category.name,category %> / <%= category.posts.count %> / </span><span class="small-text"><%= formatted_date category.posts.last&.created_at %> LAST POST</span>
+				<span class="large-text"><%= link_to category.name,category %> / <%= category.posts.count %> / </span><span class="small-text">Last post <%= formatted_date category.posts.last&.created_at %></span>
 			</p>
 		<% end %>
+
 </ul>
 </div>
+
+<img width="685" radius="10px" src="https://www.ofdesign.net/wp-content/uploads/images/minimalist-wooden-house-on-lake-zurich-with-clean-design-3-975517156.jpg">
