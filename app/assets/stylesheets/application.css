@@ -20,7 +20,7 @@ body {
 	padding: 0;
 	background: #fafaf8;
 	font-family: 'Poppins', sans-serif;
-	color: #6F6F6F;
+	color: #424242;;
 }
 
 strong {
@@ -40,6 +40,7 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 2em;
+	color: #ff7a3e;
 	/*text-transform: uppercase;	*/
 }
 
@@ -117,9 +118,10 @@ a:hover {
 	font-size: 3.8em;
 	font-weight: lighter;
 	color: #ff7a3e;
+
 }
 
-#logo h1 a {
+#logo h1 a, a:hover {
 	color: #ff7a3e;
 
 }
@@ -139,7 +141,7 @@ a:hover {
 
 
 
-#logo a {
+#logo a:hover {
 	border: none;
 	background: none;
 	text-decoration: none;
@@ -221,13 +223,13 @@ a:hover {
 	font-family: 'Poppins', sans-serif;
 	font-size: 26px;
 	font-weight: normal;
-	color: #ff651f;
+	color: #ff854d;
 	border: none;
-	border-radius: 10px 10px 10px 10px;
+	border-radius: 0px 0px 5px 5px;
 }
 
 #menu a:hover, #menu .current_page_item a {
-	background: #777777;
+	background: #bbbbbb;
 	text-decoration: none;
 }
 
@@ -375,6 +377,7 @@ a:hover {
 	margin: 0px;
 	padding: 20px 20px 0px 0px;
 	font-family: 'Poppins', sans-serif;
+	color: #424242;
 }
 
 #sidebar ul {
@@ -382,18 +385,21 @@ a:hover {
 	padding: 0;
 	list-style: none;
 	font-family: 'Poppins', sans-serif;
+	color: #424242;
 }
 
 #sidebar li {
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
+	color: #424242;
 }
 
 #sidebar li ul {
 	margin: 0px 0px;
 	padding-bottom: 20px;
 	font-family: 'Poppins', sans-serif;
+	color: #424242;
 }
 
 #sidebar li li {
@@ -403,6 +409,7 @@ a:hover {
 	border-left: none;
 	text-align: left;
 	font-family: 'Poppins', sans-serif;
+	color: #424242;
 }
 
 #sidebar li li span {
@@ -412,11 +419,13 @@ a:hover {
 	font-size: 11px;
 	font-style: italic;
 	font-family: 'Poppins', sans-serif;
+	color: #424242;
 }
 
 #sidebar li li a {
 	padding: 0px 0px 0px 15px;
 	font-family: 'Poppins', sans-serif;
+	color: #424242;
 }
 
 #sidebar h2 {

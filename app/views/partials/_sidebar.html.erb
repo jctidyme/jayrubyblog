@@ -11,7 +11,7 @@
             <div style="clear: both;">&nbsp;</div>
         </li> -->
         <li>
-          	<h2><%= link_to "Categories",categories_path %></h2>
+          	<h2><%= link_to "Tidygories",categories_path %></h2>
                 <ul>  
             	<% Category.all.each do|category| %>
               	<li><%= link_to category.name,category %></li>
@@ -22,10 +22,10 @@
         	<h2><%= link_to "Blogroll", posts_path %></h2>
             	<ul>
             	<% Post.last(10).each do |post| %>
-            	<li><%= link_to post.title,post %></li>
+            	<li><%= link_to  truncate(post.title, :length => 30),post %></li>
             	<% end %>
             	</ul>
-            <h2><%= link_to "Bloggers", admin_users_path %></h2>
+            <h2><%= link_to "Contributors", admin_users_path %></h2>
                 <ul>
                 <% AdminUser.all.each do |user| %>
                 <li><%= link_to user.name,user %></li>

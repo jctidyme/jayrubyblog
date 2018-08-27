@@ -2,6 +2,7 @@ class PostsController < ApplicationController
     def index
        @posts = Post.all.order("created_at DESC")
        @categories = Category.all
+       # @truncated_title = @post.truncate(@post.title, :length 30)
     end
     
     def show
