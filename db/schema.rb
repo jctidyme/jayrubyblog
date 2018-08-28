@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2018_08_23_115519) do
     t.integer "admin_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "byline"
   end
 
   add_foreign_key "post_comments", "posts"

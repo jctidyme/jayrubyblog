@@ -3,7 +3,8 @@
 <br>
 <div class = "post">
 <p><small>Blogged <%= @post.created_at.strftime("%A, %d %B @ %-l:%M%P") %>, by <%= @post.admin_user.name %></small></p>
-<p><%=h @post.body %></p>
+<p><%=raw @post.byline %></p>
+<p><%=raw @post.body %></p>
 <hr>
 
 

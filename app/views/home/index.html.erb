@@ -6,7 +6,8 @@
 <% @posts.first(3).each do |post| %>
 <div class ="post">
 <h3><%= link_to post.title,post %> </h3>
-    <div class="entry"><%=h truncate(post.body, :length => 300) %></div>
+<h4><%= raw post.byline %>
+    <div class="entry"><%=raw post.body.truncate(200) %></div>
     <div class = "read_more"><%=h link_to "Read more",post %></div>
 	<div class="byline">
               <small><%= post.created_at.strftime("%A, %d %B @ %-l:%M%P") %>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= post.admin_user.name %>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= post.post_comments.count %> comments</small>
