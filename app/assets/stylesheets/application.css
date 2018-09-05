@@ -16,9 +16,9 @@
  /*<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css" />*/
 
 
-*= require_tree
+/*= require_tree
 *= require_self
-
+*/
 *= stub "active_admin"
 
 body {
