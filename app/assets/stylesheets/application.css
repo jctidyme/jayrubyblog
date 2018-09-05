@@ -10,17 +10,25 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+ = require_tree .
+ = require_self
  */
  /*<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css" />*/
+
+
+*= require_tree .
+*= require_self
+
+*= stub "active_admin"
 
 body {
 	margin: 0;
 	padding: 0;
 	background: #fafaf8;
 	font-family: 'Poppins', sans-serif;
-	color: #424242;;
+	color: #424242;
+	cursor: pointer;
+	background: #ffffff;
 }
 
 strong {
@@ -46,7 +54,7 @@ h4 {
 	font-weight: normal;
 	color: #ff854d;
 	text-shadow: none;
-	padding: 3px 0px 0px 0px;
+	padding: 0px 0px 0px 20px;
 }
 
 h1 {
@@ -278,10 +286,11 @@ a:hover {
 		clear: both;
 }
 
-.blog-header h1 {
+.blog-header {
 	margin: 0;
 	padding: 0;
 	text-transform: uppercase;
+	font-size: 2em;
 	font-family: 'Poppins', sans-serif;
 	font-weight: normal;
 	color: #ff854d;
@@ -536,5 +545,57 @@ a:hover {
 #footer a {
 	color: #847F7E;
 }
+
+
+.navigation {
+  /*list-style: none;*/
+  margin: 0;
+  background: #fafaf8;
+  /*display: -webkit-box;*/
+  /*display: -moz-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: -webkit-flex;*/
+  display: inline-flex;
+  /*-webkit-flex-flow: row wrap;*/
+  justify-content: flex-end;
+  text-shadow: none;
+  color:#847F7E;
+  /*cursor: pointer;*/
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color:#847F7E;
+}
+
+.navigation a:hover {
+  background: #ff7a3e;
+}
+/*
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}*/
+/*@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+}*/
+  .navigation a, a:link {
+    text-align: center;
+    padding: 10px;
+    /*border-top: 1px solid rgba(255, 255, 255, 0.3);*/
+    /*border-bottom: 1px solid rgba(0, 0, 0, 0.1);*/
+    color:#847F7E;
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
 
 form label{width:110px;display:inline-block;}

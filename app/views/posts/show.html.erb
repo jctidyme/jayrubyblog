@@ -1,5 +1,5 @@
 
-<div class = "blog-header"><h1><%= link_to @post.category.name, category_path(@post.category) %> / <%= @post.title %></h1></div>
+<div class = "blog-header"><%= link_to @post.category.name, category_path(@post.category) %> / <%= @post.title %></div>
 <br>
 <div class = "post">
 <p><small>Blogged <%= @post.created_at.strftime("%A, %d %B @ %-l:%M%P") %>, by <%= @post.admin_user.name %></small></p>

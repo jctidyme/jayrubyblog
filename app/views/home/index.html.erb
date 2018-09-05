@@ -1,12 +1,12 @@
-
+<div id="body">
 <span><img width="685px" src="https://files.ozbargain.com.au/n/95/267095x.jpg?h=a5140dd0"></span>
 <br><br>
-<div class ="blog-header"><h1>Recent Posts</h1></div>
+<div class ="blog-header">Recent Posts</div>
 <br>
 <% @posts.first(3).each do |post| %>
 <div class ="post">
 <h3><%= link_to post.title,post %> </h3>
-<h4><%= raw post.byline %>
+<h4><%= raw post.byline %></h4>
     <div class="entry"><%=raw post.body.truncate(200) %></div>
     <div class = "read_more"><%=h link_to "Read more",post %></div>
 	<div class="byline">
@@ -15,3 +15,4 @@
 </div>
 
 <% end %>
+</div>
